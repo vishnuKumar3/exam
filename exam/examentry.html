@@ -1,0 +1,68 @@
+<!doctype html>
+<title>Login form</title>
+<style>
+.box{margin-top:50px;position:absolute;margin-left:400px;width:402px;height:330px;border-radius:40px 15px 40px 15px;border:1px solid black;}
+.login{width:400px;height:50px;border:1px solid green;border-radius:40px 15px 10px 15px;background-color:violet;padding-bottom:10px;} h1{color:blue;margin-left:30px;}
+h2{color:green;margin-left:10px;}
+img{float:left;width:80px;height:80px;}
+body{background:radial-gradient(white 30%,lime);background-repeat:no-repeat;height:620px;}
+</style>
+<body>
+<hr>
+<img src="examfiles/logo.png">
+<center style="font-size:25px;color:red;">Rajiv Gandhi University Of Knowledge Technologies</center>
+<br>
+<center style="font-size:25px;color:green;">catering to the Educational Needs of Gifted Rural Youth of A.P</center>
+<hr>
+<div class="box">
+<div class="login"><h1>Login</h1></div>
+<form>
+<h2>Username:
+<input type="text" id="username" value="" placeholder="username:" autofocus required style="width:300px;height:30px;margin-bottom:10px;"></h2>
+<h2>Password:
+<input type="password" id="password" value="" placeholder="password:" required style="width:300px;height:30px;margin-bottom:10px;">
+<br>
+<button onclick="myfunction()">Submit</button></h2>
+</div>
+</body>
+<script>
+
+         
+
+function rightclick(){
+	return false;}
+document.oncontextmenu =rightclick;
+document.onselectstart=select;
+function select(){
+	return false;}
+
+
+
+function myfunction(){
+if(localStorage.amount==undefined){
+var username=document.getElementById('username').value;
+var password=document.getElementById('password').value;
+var pass=0;
+var a={r170001:0001,r170002:0002};
+pass=a[username];
+if(username!="" && password!=""){
+if(pass!=undefined){
+var b=[0001,0002];
+for(var d=0;d<2;d++){
+	if(password==b[d]){
+	localStorage.amount=1;
+	window.open("examfiles/exampaper.html"," ","width=3000,height=767");
+	}}}
+else{
+alert("you enter wrong username or password");}}
+else{alert("please fill all fields");}
+window.history.go(0);}
+else{
+	window.alert("You already wrote exam onetime in this system");}}
+</script>
+
+
+
+
+
+
